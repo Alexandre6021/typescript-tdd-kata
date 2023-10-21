@@ -58,6 +58,4 @@ describe('Import toile test', () => {
         expect(archived.symlink_geocoding_filename).toEqual(symlink_geocoding_filename);
     
    });
-
-
 });

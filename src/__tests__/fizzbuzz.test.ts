@@ -1,13 +1,31 @@
-// import hello from "../hello";
+import fizzbuzz from "../FizzBuzz";
 
 describe('FizzBuzz tdd test', () => {
 
     beforeEach( () => {
 	})
 
-    it('write my first test', () => {
-        expect(1).toEqual(1)
+    it('pour un tableau ayant un 3', async () => {
+        
+        var tab:string[] = ["1", "2","Fizz"];
+        var tabResult = await fizzbuzz(3);
+        expect(tab).toEqual(tabResult)
     });
+
+    it('pour un tableau ayant un 5', async () => {
+        
+        var tab:string[] = ["1","2","Fizz","4","Buzz"];
+        var tabResult = await fizzbuzz(5);
+        expect(tab).toEqual(tabResult)
+    });
+
+    it('pour un tableau ayant un multiple de 3 et 5', async () => {
+        
+        var tab:string[] = ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"];
+        var tabResult = await fizzbuzz(15);
+        expect(tab).toEqual(tabResult)
+    });
+
 });
 
 

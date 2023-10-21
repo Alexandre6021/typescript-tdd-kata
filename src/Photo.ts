@@ -59,7 +59,6 @@ export class Photo {
     return {archive_filename,thumbnail_filename,symlink_geocoding_filename,symlink_photo_filename};
   } 
 
-
   private async generateGeocodedFileLink(photo_path:string|undefined, filename:string): Promise<string> {
     let symlink_thumbnail_filename:string = "";
     if(photo_path){
@@ -179,7 +178,7 @@ export class Photo {
     return thumbnal_filename;
   }
 
-  private  archive_photo(archive_path:string): string {
+  private archive_photo(archive_path:string): string {
 
     let new_path = path.join(archive_path,this.getYearMonthDayPath());
     if (!fs.existsSync(new_path)) 

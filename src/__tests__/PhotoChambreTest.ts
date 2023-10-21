@@ -57,6 +57,5 @@ describe('Import chambre test', () => {
         when(spiedPhoto.getExifTags()).thenReturn(undefined);
         let archived = await photo.archive(archive_path,thumbnail_path,photos_path);
         expect(archived.symlink_geocoding_filename).toEqual(symlink_geocoding_filename);
-    
    });
 });

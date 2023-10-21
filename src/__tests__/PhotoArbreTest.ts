@@ -64,6 +64,4 @@ describe('Import arbre test', () => {
         expect(archived.symlink_geocoding_filename).toEqual("");
     
    });
-
-
 });
